@@ -39,4 +39,7 @@ if __name__ == "__main__":
 
     df = pd.DataFrame({'순위':rank,'곡명':title,'가수명':song})
     result_df = pd.concat([result_df, df], ignore_index=True)
-    result_df.to_csv('melon.csv')
+    result_df.to_csv('melon.csv', encoding='euc-kr')
+
+from google.colab import drive
+drive.mount('/content/drive')
